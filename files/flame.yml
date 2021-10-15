@@ -1,0 +1,10 @@
+version: '2.1'
+services:
+  flame:
+    image: pawelmalak/flame:latest
+    container_name: flame
+    volumes:
+      - $HOME/docker/flame/:/app/data
+    ports:
+      - 5005:5005
+    restart: unless-stopped
