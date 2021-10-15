@@ -9,4 +9,4 @@ mkdir $HOME/docker/proxy/
 #mkdir $HOME/docker/
 
 echo "Start Proxy"
-cp proxy.yml $HOME/docker/proxy/docker-compose.yml
+cp files/proxy.yml $HOME/docker/proxy/docker-compose.yml
