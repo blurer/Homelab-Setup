@@ -30,3 +30,8 @@ echo "[Flame]"
 cp files/flame.yml $HOME/docker/flame/docker-compose.yml
 docker-compose -f $HOME/docker/flame/docker-compose.yml up -d
 
+echo "PiVPN"
+curl -L https://install.pivpn.io > install.sh
+chmod +x install.sh
+./install.sh --unattended files/options.conf
+
