@@ -35,3 +35,13 @@ curl -L https://install.pivpn.io > install.sh
 chmod +x install.sh
 ./install.sh --unattended files/options.conf
 
+pivpn -a -n bl-iphone11
+pivpn -a -n bl-mac
+pivpn -a -n bl-dt
+pivpn -a -n bl-ipad
+pivpn -a -n bl-pixel
+pivpn -a -n bl-a300
+pivpn -a -n bl-pi4
+pivpn -a -n bl-nas
+pivpn -a -n bl-note9
+pivpn -a -n home
