@@ -7,6 +7,7 @@ mkdir $HOME/docker/dns/
 mkdir $HOME/docker/uptime-kuma/
 mkdir $HOME/docker/portainer/
 mkdir $HOME/docker/flame/
+mkdir $HOME/docker/smokeping/
 
 echo "[Start Proxy]"
 cp files/proxy.yml $HOME/docker/proxy/docker-compose.yml
@@ -45,3 +46,8 @@ pivpn -a -n bl-pi4
 pivpn -a -n bl-nas
 pivpn -a -n bl-note9
 pivpn -a -n home
+
+echo "Smokeping"
+
+cp files/smokeping.yml $HOME/docker/smokeping/docker-compose.yml
+docker-compose -f $HOME/docker/smokeping/docker-compose.yml up -d

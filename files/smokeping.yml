@@ -1,0 +1,16 @@
+---
+version: "2.1"
+services:
+  smokeping:
+    image: lscr.io/linuxserver/smokeping
+    container_name: smokeping
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Tokyo
+    volumes:
+      - $HOME/docker/smokeping/config:/config
+      - $HOME/docker/smokeping/data:/data
+    ports:
+      - 7052:80
+    restart: unless-stopped
