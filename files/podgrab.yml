@@ -1,0 +1,13 @@
+version: "2.1"
+services:
+  podgrab:
+    image: akhilrex/podgrab
+    container_name: podgrab
+    environment:
+      - CHECK_FREQUENCY=240
+    volumes:
+      - /$HOME/docker/podgrab/config:/config
+      - /$HOME/docker/podgrab/data:/assets
+    ports:
+      - 7053:8080
+    restart: unless-stopped

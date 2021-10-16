@@ -8,6 +8,7 @@ mkdir $HOME/docker/uptime-kuma/
 mkdir $HOME/docker/portainer/
 mkdir $HOME/docker/flame/
 mkdir $HOME/docker/smokeping/
+mkdir $HOME/docker/podgrab/
 
 echo "[Start Proxy]"
 cp files/proxy.yml $HOME/docker/proxy/docker-compose.yml
@@ -51,3 +52,8 @@ echo "Smokeping"
 
 cp files/smokeping.yml $HOME/docker/smokeping/docker-compose.yml
 docker-compose -f $HOME/docker/smokeping/docker-compose.yml up -d
+
+
+echo "Podgrab"
+cp files/podgrab.yml $HOME/docker/podgrab/docker-compose.yml
+docker-compose -f $HOME/docker/podgrab/docker-compose.yml up -d
