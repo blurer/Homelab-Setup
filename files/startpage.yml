@@ -1,0 +1,15 @@
+---
+version: "2.1"
+services:
+  nginx:
+    image: lscr.io/linuxserver/nginx
+    container_name: startpage
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Tokyo
+    volumes:
+      - $HOME/docker/startpage/:/config
+    ports:
+      - 8087:443
+    restart: unless-stopped
