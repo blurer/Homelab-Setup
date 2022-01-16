@@ -11,13 +11,10 @@ services:
       - "7000:80/tcp"
     environment:
       TZ: 'Asia/Tokyo'
-      # WEBPASSWORD: 'set a secure password here or it will be random'
-    # Volumes store your data between container upgrades
+      WEBPASSWORD: 'GetYourOwnPassword'
     volumes:
       - '$HOME/docker/dns/etc-pihole/:/etc/pihole/'
       - '$HOME/docker/dns/etc-dnsmasq.d/:/etc/dnsmasq.d/'
-    # Recommended but not required (DHCP needs NET_ADMIN)
-    #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
