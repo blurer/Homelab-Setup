@@ -19,6 +19,7 @@ needWger = input('Need Wger: ').upper()
 needCode = input('Need CodeWeb: ').upper()
 needStartpage = input('Need Startpage: ').upper()
 needWiki = input('Need Wiki: ').upper()
+needPlex = input('Need Plex: ').upper()
 #needMealie = input('Need Recipes: ').upper()
 #needBitwarden = input('Need Bitwarden: ').upper()
 #needPing = input('Need Smokeping: ').upper()
@@ -59,5 +60,9 @@ if needStartpage =='Y':
 if needWiki =='Y':
     print('Installing Wiki')
     subprocess.run(["bash", "scripts/installWiki.sh"])
-    print('Wiki up')  
+    print('Wiki up')
+if needPlex == 'Y':
+    print('Installing Plex')
+    subprocess.run(["bash", "scripts/installPlex.sh"])
+    print('Plex up')
 print('#'*64)

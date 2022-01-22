@@ -5,6 +5,12 @@ Run the ``main.py`` script to semi-auto install various applications. Assumes Do
 
 Answer Y/N (y/n) to the questions if you need them installed. The script calls bash scripts within the scripts folder, pulls compose files (where applicable) from the files directory, and runs them within the $HOME/docker/$app/ directory. 
 
+### To Do
+- Automate proxy connectivity (currently need to go into Portainer and flip network to proxy_default)
+- Automate OS setup
+
+## Examples
+
 ```
 bl@bl-jp ~/dev/Homelab-Setup (main) $ ./main.py 
 BL Homelab Script
