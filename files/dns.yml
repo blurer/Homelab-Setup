@@ -11,10 +11,9 @@ services:
       - "7000:80/tcp"
     environment:
       TZ: 'Asia/Tokyo'
-      WEBPASSWORD: 'GetYourOwnPassword'
     volumes:
-      - '$HOME/docker/dns/etc-pihole/:/etc/pihole/'
-      - '$HOME/docker/dns/etc-dnsmasq.d/:/etc/dnsmasq.d/'
+      - '/opt/docker/dns/etc-pihole/:/etc/pihole/'
+      - '/opt/docker/dns/etc-dnsmasq.d/:/etc/dnsmasq.d/'
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
