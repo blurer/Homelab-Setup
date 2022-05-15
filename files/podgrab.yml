@@ -9,5 +9,5 @@ services:
       - /$HOME/docker/podgrab/config:/config
       - /$HOME/docker/podgrab/data:/assets
     ports:
-      - 7053:8080
+      - 7002:8080
     restart: unless-stopped

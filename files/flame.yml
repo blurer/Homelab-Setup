@@ -6,5 +6,5 @@ services:
     volumes:
       - $HOME/docker/flame/:/app/data
     ports:
-      - 5005:5005
+      - 7001:5005
     restart: unless-stopped

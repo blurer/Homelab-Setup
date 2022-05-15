@@ -10,10 +10,10 @@ services:
       - "53:53/udp"
       - "7000:80/tcp"
     environment:
-      TZ: 'Asia/Tokyo'
+      TZ: 'America/New_York'
     volumes:
-      - '/opt/docker/dns/etc-pihole/:/etc/pihole/'
-      - '/opt/docker/dns/etc-dnsmasq.d/:/etc/dnsmasq.d/'
+      - '$HOME/docker/dns/etc-pihole/:/etc/pihole/'
+      - '$HOME/docker/dns/etc-dnsmasq.d/:/etc/dnsmasq.d/'
     cap_add:
       - NET_ADMIN
     restart: unless-stopped

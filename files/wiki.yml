@@ -7,9 +7,9 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Asia/Tokyo
+      - TZ=America/New_York
     volumes:
       - $HOME/docker/wiki/:/config
     ports:
-      - 8088:443
+      - 7005:443
     restart: unless-stopped

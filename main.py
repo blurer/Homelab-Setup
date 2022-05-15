@@ -20,49 +20,34 @@ needCode = input('Need CodeWeb: ').upper()
 needStartpage = input('Need Startpage: ').upper()
 needWiki = input('Need Wiki: ').upper()
 needPlex = input('Need Plex: ').upper()
-#needMealie = input('Need Recipes: ').upper()
-#needBitwarden = input('Need Bitwarden: ').upper()
-#needPing = input('Need Smokeping: ').upper()
-#needBudget = input('Need Budget: ').upper()
+needMealie = input('Need Recipes: ').upper()
+needBitwarden = input('Need Bitwarden: ').upper()
+needPing = input('Need Smokeping: ').upper()
+needBudget = input('Need Budget: ').upper()
 print('#'*64)
 if needProxy == 'Y':
-    print('Installing Proxy')
     subprocess.run(["bash", "scripts/installProxy.sh"])
-    print('Proxy Complete')
 if needDNS == 'Y':
-    print('Installing PiHole')
     subprocess.run(["bash", "scripts/installDNS.sh"])
-    print('DNS Complete')
 if needUptime == 'Y':
-    print('Installing UptimeKuma')
     subprocess.run(["bash", "scripts/installUptimeKuma.sh"])
-    print('UptimeKuma Complete')
 if needPortainer == 'Y':
-    print('Installing Portainer')
     subprocess.run(["bash", "scripts/installPortainer.sh"])
-    print('Portainer Complete')
 if needIperf == 'Y':
-    print('Installing Iperf')
     subprocess.run(["bash", "scripts/installIperf.sh"])
-    print('Iperf Complete')
 if needWger == 'Y':
-    print('Installing Wger')
     subprocess.run(["bash", "scripts/installWger.sh"])
-    print('Wger Complete')
 if needCode =='Y':
-    print('Installing Code')
     subprocess.run(["bash", "scripts/installCode.sh"])
-    print('Code up')
 if needStartpage =='Y':
-    print('Installing Startpage')
     subprocess.run(["bash", "scripts/installStartpage.sh"])
-    print('Startpage up')
 if needWiki =='Y':
-    print('Installing Wiki')
     subprocess.run(["bash", "scripts/installWiki.sh"])
-    print('Wiki up')
 if needPlex == 'Y':
-    print('Installing Plex')
     subprocess.run(["bash", "scripts/installPlex.sh"])
-    print('Plex up')
-print('#'*64)
+if needBitwarden == 'Y':
+    subprocess.run(["bash", "scripts/installBitwarden.sh"])
+if needFlame == 'Y':
+    subprocess.run(["bash", "scripts/installFlame.sh"])
+if needBudget == "Y":
+    subprocess.run(["bash", "scripts/installFirefly.sh"])

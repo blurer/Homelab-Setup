@@ -7,10 +7,10 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Asia/Tokyo
+      - TZ=America/New_York
     volumes:
       - $HOME/docker/smokeping/config:/config
       - $HOME/docker/smokeping/data:/data
     ports:
-      - 7052:80
+      - 7004:80
     restart: unless-stopped
