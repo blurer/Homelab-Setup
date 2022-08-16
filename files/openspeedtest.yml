@@ -1,0 +1,9 @@
+version: "3"
+services:
+  openspeedtest:
+    image: openspeedtest/latest:latest
+    container_name: openspeedtest
+    ports:
+      - 3210:3000
+      - 3211:3001
+    restart: always
