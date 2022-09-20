@@ -9,7 +9,7 @@ services:
       - PGID=1000
       - TZ=America/New_York
     volumes:
-      - $HOME/docker/startpage/:/config
+      - /mnt/data/startpage/:/config
     ports:
       - 7008:443
     restart: unless-stopped

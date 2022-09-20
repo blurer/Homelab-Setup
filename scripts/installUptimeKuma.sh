@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir $HOME/docker/uptime/
-cp files/uptime-kuma.yml $HOME/docker/uptime/docker-compose.yml
-docker-compose -f $HOME/docker/uptime/docker-compose.yml up -d
+mkdir /mnt/data/uptime/
+cp files/uptime-kuma.yml /mnt/data/uptime/docker-compose.yml
+docker-compose -f /mnt/data/uptime/docker-compose.yml up -d

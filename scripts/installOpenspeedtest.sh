@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir $HOME/docker/openspeedtest/
-cp files/openspeedtest.yml $HOME/docker/openspeedtest/docker-compose.yml
-docker-compose -f $HOME/docker/openspeedtest/docker-compose.yml up -d
+mkdir /mnt/data/openspeedtest/
+cp files/openspeedtest.yml /mnt/data/openspeedtest/docker-compose.yml
+docker-compose -f /mnt/data/openspeedtest/docker-compose.yml up -d

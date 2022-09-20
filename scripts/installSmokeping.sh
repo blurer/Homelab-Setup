@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir $HOME/docker/smokeping/
-cp files/smokeping.yml $HOME/docker/smokeping/docker-compose.yml
-docker-compose -f $HOME/docker/smokeping/docker-compose.yml up -d
+mkdir /mnt/data/smokeping/
+cp files/smokeping.yml /mnt/data/smokeping/docker-compose.yml
+docker-compose -f /mnt/data/smokeping/docker-compose.yml up -d

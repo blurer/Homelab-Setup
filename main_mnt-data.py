@@ -24,6 +24,8 @@ needBudget = input('Need Budget: ').upper()
 needOpenSpeedtest = input('Need SpeedTest: ').upper()
 needDockerLogs = input('Need Docker Logs: ').upper()
 needSpeedtestLogger = input('Need Speedtest Logger: ').upper()
+needWger = input('Need Wger: ').upper()
+needPodgrab = input('Need Podgrab: ').upper()
 
 print('#'*64)
 if needProxy == 'Y':
@@ -56,3 +58,7 @@ if needDockerLogs == 'Y':
     subprocess.run(["bash", "scripts/installDozzle.sh"])
 if needSpeedtestLogger == 'Y':
     subprocess.run(["bash", "scripts/installSpeedtestLogger.sh"])
+if needWger == 'Y':
+    subprocess.run(["bash", "scripts/installWger.sh"])
+if needPodgrab == 'Y':
+    subprocess.run(["bash", "scripts/installPodgrab.sh"])

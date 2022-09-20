@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir $HOME/docker/flame/
-cp files/flame.yml $HOME/docker/flame/docker-compose.yml
-docker-compose -f $HOME/docker/flame/docker-compose.yml up -d
+mkdir /mnt/data/flame/
+cp files/flame.yml /mnt/data/flame/docker-compose.yml
+docker-compose -f /mnt/data/flame/docker-compose.yml up -d

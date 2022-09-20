@@ -9,7 +9,7 @@ services:
       - PGID=1000
       - TZ=America/New_York
     volumes:
-      - $HOME/docker/wiki/:/config
+      - /mnt/data/wiki/:/config
     ports:
       - 7005:443
     restart: unless-stopped

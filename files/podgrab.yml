@@ -6,8 +6,8 @@ services:
     environment:
       - CHECK_FREQUENCY=240
     volumes:
-      - /$HOME/docker/podgrab/config:/config
-      - /$HOME/docker/podgrab/data:/assets
+      - /mnt/data/podgrab/config:/config
+      - /mnt/data/podgrab/data:/assets
     ports:
       - 7002:8080
     restart: unless-stopped
