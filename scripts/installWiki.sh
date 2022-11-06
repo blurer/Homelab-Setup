@@ -1,11 +1,11 @@
 #!/bin/bash
 
-mkdir /mnt/data/wiki
+mkdir /mnt/docker/wiki
 mkdir $HOME/dev/
 mkdir $HOME/dev/wiki
-cp files/wiki.yml /mnt/data/wiki/docker-compose.yml
-docker-compose -f /mnt/data/wiki/docker-compose.yml up -d
+cp files/wiki.yml /mnt/docker/wiki/docker-compose.yml
+docker-compose -f /mnt/docker/wiki/docker-compose.yml up -d
 
 git clone git@github.com:blurer/wiki.git $HOME/dev/wiki/
-rm -rf /mnt/data/wiki/www/*
-cp -rf $HOME/dev/wiki/site/* /mnt/data/wiki/www/
+rm -rf /mnt/docker/wiki/www/*
+cp -rf $HOME/dev/wiki/site/* /mnt/docker/wiki/www/

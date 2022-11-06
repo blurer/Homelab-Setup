@@ -5,6 +5,6 @@ services:
     image: louislam/uptime-kuma
     container_name: uptime-kuma
     volumes:
-      - /mnt/data/uptime-kuma:/app/data
+      - /mnt/docker/uptime-kuma:/app/data
     ports:
       - 7006:3001

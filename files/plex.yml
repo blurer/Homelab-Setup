@@ -16,10 +16,10 @@ services:
       - 32414:32414/udp
     environment:
       - TZ=America/New_York
-      - PLEX_CLAIM=claim-7EDrRSzhGeP_2MD7Kc3P
-      - ADVERTISE_IP=http://139.162.119.124:32400/
+      - PLEX_CLAIM=
+      - ADVERTISE_IP
     hostname: <hostname>
     volumes:
-      - $HOME/docker/plex/:/config
-      - $HOME/docker/plex/temp:/transcode
-      - $HOME/media/:/data
+      - /mnt/docker/plex/:/config
+      - /mnt/docker/plex/temp:/transcode
+      - /mnt/media/:/data

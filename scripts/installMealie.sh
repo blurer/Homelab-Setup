@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir /mnt/data/mealie/
-cp files/mealie.yml /mnt/data/mealie/docker-compose.yml
-docker-compose -f /mnt/data/mealie/docker-compose.yml up -d
+mkdir /mnt/docker/mealie/
+cp files/mealie.yml /mnt/docker/mealie/docker-compose.yml
+docker-compose -f /mnt/docker/mealie/docker-compose.yml up -d

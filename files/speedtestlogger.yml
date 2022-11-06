@@ -6,7 +6,7 @@ services:
         ports:
             - 8765:80
         volumes:
-            - /mnt/data/speedtest-tracker/:/config
+            - /mnt/docker/speedtest-tracker/:/config
         environment:
             - TZ=America/New_York
             - PGID=1000

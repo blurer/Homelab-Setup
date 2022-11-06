@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir /mnt/data/wger/
-git clone git@github.com:blurer/docker-wger.git /mnt/data/wger/
-docker-compose -f /mnt/data/wger/docker-compose.yml up -d
+mkdir /mnt/docker/wger/
+git clone git@github.com:blurer/docker-wger.git /mnt/docker/wger/
+docker-compose -f /mnt/docker/wger/docker-compose.yml up -d
