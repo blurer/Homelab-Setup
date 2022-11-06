@@ -9,7 +9,7 @@ services:
       - '443:443' # Public HTTPS Port
       - '8181:81' # Admin Web Port
       # Add any other Stream port you want to expose
-       - '21:21' # FTP
+      - '21:21' # FTP
 
     # Uncomment the next line if you uncomment anything in the section
      environment:
