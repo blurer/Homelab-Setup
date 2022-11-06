@@ -12,8 +12,8 @@ services:
     environment:
       TZ: 'America/New_York'
     volumes:
-      - '/mnt/data/dns/etc-pihole/:/etc/pihole/'
-      - '/mnt/data/dns/etc-dnsmasq.d/:/etc/dnsmasq.d/'
+      - '/mnt/docker/dns/etc-pihole/:/etc/pihole/'
+      - '/mnt/docker/dns/etc-dnsmasq.d/:/etc/dnsmasq.d/'
     cap_add:
       - NET_ADMIN
     restart: unless-stopped

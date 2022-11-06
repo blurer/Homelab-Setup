@@ -14,8 +14,8 @@ services:
       DB_MYSQL_PASSWORD: "npm"
       DB_MYSQL_NAME: "npm"
     volumes:
-      - $HOME/docker/proxy/data:/data
-      - $HOME/docker/proxy/letsencrypt:/etc/letsencrypt
+      - /mnt//docker/proxy/data:/data
+      - /mnt/docker/proxy/letsencrypt:/etc/letsencrypt
   db:
     image: 'jc21/mariadb-aria:latest'
     restart: unless-stopped
