@@ -6,7 +6,7 @@ from subprocess import call
 import time
         
 print('#'*64)
-print('DO NOT USE THIS UNLESS YOU HAVE /mnt/docker/')
+#print('DO NOT USE THIS UNLESS YOU HAVE /mnt/docker/')
 # This assumes you have docker installed.
 # This will create a $HOME/docker/ directory 
 needProxy = input('Need NginxProxyManager: ').upper()
