@@ -1,4 +1,12 @@
+# verizon
+spg.vzw.com
+wo.vzwwo.com
+sg.vzwfemto.com
+
+# rcs
 jibecloud.net
+
+#misc
 0.client-channel.google.com
 1drv.com
 2.android.pool.ntp.org
