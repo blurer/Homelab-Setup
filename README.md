@@ -1,40 +1,34 @@
 # Homelab-Setup
 homelab script
 
-Run the ``main.py`` script to semi-auto install various applications. Assumes Docker and Docker-compose are installed.
+Run the ``main.py`` script to semi-auto install various applications. Assumes Docker and Docker-compose are installed. Answer Y/N (y/n) to the questions if you need them installed. The script calls bash scripts within the scripts folder, pulls compose files (where applicable) from the files directory, and runs them within the $HOME/docker/$app/ directory. Added functionality to automatically add the docker containers to the proxy_default network (created by nginxproxymanager). 
 
-Answer Y/N (y/n) to the questions if you need them installed. The script calls bash scripts within the scripts folder, pulls compose files (where applicable) from the files directory, and runs them within the $HOME/docker/$app/ directory. 
 
 ### To Do
-- Automate proxy connectivity (currently need to go into Portainer and flip network to proxy_default)
+[x] Automate proxy connectivity (currently need to go into Portainer and flip network to proxy_default)
 - Automate OS setup
 
 ## Examples
 
 ```
-bl@bl-jp ~/dev/Homelab-Setup (main) $ ./main.py 
+# bl @ bl-de in ~/dev/Homelab-Setup on git:main o [7:32:44]
+$ ./main.py
+Enter the directory path to run the services [/home/bl/docker/]:
 BL Homelab Script
 Answer Y/N to the following
 ################################################################
-Need NginxProxyManager: n
-Need PiHole DNS: n
-Need UptimeKuma: n
-Need Portainer: n
-Need IPerf: n
-Need Wger: n
-Need CodeWeb: n
-Need Startpage: n
-Need Wiki: y
-################################################################
-Installing Wiki
-mkdir: cannot create directory ‘/home/bl/docker/wiki’: File exists
-mkdir: cannot create directory ‘/home/bl/dev/’: File exists
-mkdir: cannot create directory ‘/home/bl/dev/wiki’: File exists
-[+] Running 1/0
- ⠿ Container wiki  Running                                                                                                0.0s
-fatal: destination path '/home/bl/dev/wiki' already exists and is not an empty directory.
-Wiki up
-################################################################
+Need NginxProxyManager:
+Need PiHole DNS:
+Need Cloudflare DDNS:
+Need UptimeKuma:
+Need Smokeping:
+Need Portainer:
+Need Homepage:
+Need IPerf:
+Need Wiki:
+Need Mealie:
+Need SpeedTest:
+Need eBook:
 ```
 
 
