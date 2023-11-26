@@ -9,7 +9,6 @@ services:
       - '8181:81'
     environment:
       DISABLE_IPV6: 'true'
-      DB_SQLITE_FILE: "/home/bl/docker/proxy/database.sqlite"
     volumes:
-      - /home/bl/docker/proxy/data:/data
-      - /home/bl/docker/proxy/letsencrypt:/etc/letsencrypt
+      - "{{ user_path }}/proxy/data:/data"
+      - "{{ user_path }}/proxy/letsencrypt:/etc/letsencrypt"

@@ -23,3 +23,8 @@ services:
       - /mnt/docker/plex/:/config
       - /mnt/docker/plex/temp:/transcode
       - /mnt/media/:/data
+      networks:
+      - proxy_default
+networks:
+  proxy_default:
+    external: true

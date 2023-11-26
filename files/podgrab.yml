@@ -11,3 +11,8 @@ services:
     ports:
       - 7002:8080
     restart: unless-stopped
+    networks:
+      - proxy_default
+networks:
+  proxy_default:
+    external: true

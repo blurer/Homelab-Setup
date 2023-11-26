@@ -24,4 +24,9 @@ services:
       # WORKERS_PER_CORE: 0.5
       # MAX_WORKERS: 8
     volumes:
-      - /home/bl/docker/mealie/data/:/app/data
+      - {{ user_path }}/mealie/data/:/app/data
+    networks:
+      - proxy_default
+networks:
+  proxy_default:
+    external: true

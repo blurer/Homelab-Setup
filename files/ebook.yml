@@ -1,0 +1,19 @@
+---
+version: "2.1"
+services:
+  kavita:
+    image: lscr.io/linuxserver/kavita:latest
+    container_name: kavita
+    environment:
+      - TZ=America/New_York
+    volumes:
+      - {{ user_path }}/books/config:/config
+      - {{ user_path }}/books/library:/data
+    ports:
+      - 5023:5000
+    restart: unless-stopped
+    networks:
+      - proxy_default
+networks:
+  proxy_default:
+    external: true

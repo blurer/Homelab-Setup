@@ -9,8 +9,13 @@ services:
       - PGID=1000
       - TZ=America/New_York
     volumes:
-      - /home/bl/docker/smokeping/config:/config
-      - /home/bl/docker/smokeping/data:/data
+      - {{ user_path }}/smokeping/config:/config
+      - {{ user_path }}/smokeping/data:/data
     ports:
       - 7004:80
     restart: unless-stopped
+    networks:
+      - proxy_default
+networks:
+  proxy_default:
+    external: true

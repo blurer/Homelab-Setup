@@ -4,7 +4,12 @@ services:
     image: pawelmalak/flame:latest
     container_name: flame
     volumes:
-      - /home/bl/docker/flame/:/app/data
+      - {{ user_path }}/flame/:/app/data
     ports:
       - 7001:5005
     restart: unless-stopped
+    networks:
+      - proxy_default
+networks:
+  proxy_default:
+    external: true

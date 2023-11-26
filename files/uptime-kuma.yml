@@ -5,7 +5,12 @@ services:
     image: louislam/uptime-kuma
     container_name: uptime-kuma
     volumes:
-      - /home/bl/docker/uptime-kuma:/app/data
+      - {{ user_path }}/uptime:/app/data
       - /var/run/docker.sock:/var/run/docker.sock:ro
     ports:
       - 7006:3001
+    networks:
+      - proxy_default
+networks:
+  proxy_default:
+    external: true

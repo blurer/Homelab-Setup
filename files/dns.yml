@@ -1,6 +1,5 @@
 version: "3"
 
-# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
 services:
   pihole:
     container_name: pihole
@@ -12,8 +11,13 @@ services:
     environment:
       TZ: 'America/New_York'
     volumes:
-      - '/mnt/docker/dns/etc-pihole/:/etc/pihole/'
-      - '/mnt/docker/dns/etc-dnsmasq.d/:/etc/dnsmasq.d/'
+      - {{ user_path }}/dns/etc-pihole/:/etc/pihole/
+      - {{ user_path }}/dns/etc-dnsmasq.d/:/etc/dnsmasq.d/
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
+    networks:
+      - proxy_default
+networks:
+  proxy_default:
+    external: true

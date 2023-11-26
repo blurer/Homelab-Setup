@@ -7,3 +7,8 @@ services:
       - 3210:3000
       - 3211:3001
     restart: always
+    networks:
+      - proxy_default
+networks:
+  proxy_default:
+    external: true

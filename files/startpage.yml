@@ -13,3 +13,8 @@ services:
     ports:
       - 7008:443
     restart: unless-stopped
+    networks:
+      - proxy_default
+networks:
+  proxy_default:
+    external: true

@@ -18,3 +18,8 @@ services:
                 max-file: "10"
                 max-size: "200k"
         restart: unless-stopped
+    networks:
+      - proxy_default
+networks:
+  proxy_default:
+    external: true
